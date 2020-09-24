@@ -1,0 +1,49 @@
+{
+  "type": "DFA",
+  "dfa": {
+    "transitions": {
+      "start": { "b": "s0", "a": "s1" },
+      "s1": { "b": "s2", "a": "s2" },
+      "s2": { "a": "s1", "b": "s2" },
+      "s0": { "a": "s3", "b": "s3" },
+      "s3": { "a": "s3", "b": "s3" }
+    },
+    "startState": "start",
+    "acceptStates": ["s0", "s2", "s1", "start"]
+  },
+  "states": {
+    "start": { "isAccept": true },
+    "s0": {
+      "isAccept": true,
+      "top": 245.95168496020509,
+      "left": 86.96022606738282
+    },
+    "s1": {
+      "isAccept": true,
+      "top": 56.96022225268555,
+      "left": 75.95171166308594
+    },
+    "s2": {
+      "isAccept": true,
+      "top": 76.91761208422852,
+      "left": 575.9517116630859
+    },
+    "s3": { "top": 237.94033242114259, "left": 396.9318142021484 }
+  },
+  "transitions": [
+    { "stateA": "start", "label": "b", "stateB": "s0" },
+    { "stateA": "start", "label": "a", "stateB": "s1" },
+    { "stateA": "s1", "label": "b", "stateB": "s2" },
+    { "stateA": "s1", "label": "a", "stateB": "s2" },
+    { "stateA": "s2", "label": "a", "stateB": "s1" },
+    { "stateA": "s2", "label": "b", "stateB": "s2" },
+    { "stateA": "s0", "label": "a", "stateB": "s3" },
+    { "stateA": "s0", "label": "b", "stateB": "s3" },
+    { "stateA": "s3", "label": "a", "stateB": "s3" },
+    { "stateA": "s3", "label": "b", "stateB": "s3" }
+  ],
+  "bulkTests": {
+    "accept": "aaaaaabbbbbbb\naaabbb\naabbb\nabbb\nab\na\nb\n",
+    "reject": "bbbbba\nbba\nba\nbaba\nbbbb"
+  }
+}

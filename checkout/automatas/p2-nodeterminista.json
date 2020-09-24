@@ -1,0 +1,42 @@
+{
+  "type": "NFA",
+  "nfa": {
+    "transitions": {
+      "start": { "0": [], "1": [], "a": ["s0"], "b": ["s2"] },
+      "s0": { " ": [], "b": ["s1"], "a": ["s1"] },
+      "s1": { "b": ["s1"], "a": ["s0"] }
+    },
+    "startState": "start",
+    "acceptStates": ["s1", "s2", "s0", "start"]
+  },
+  "states": {
+    "start": { "isAccept": true },
+    "s0": {
+      "isAccept": true,
+      "top": 95.98011208422852,
+      "left": 148.9772853935547
+    },
+    "s2": {
+      "isAccept": true,
+      "top": 214.98578835375977,
+      "left": 174.98579979785157
+    },
+    "s1": {
+      "isAccept": true,
+      "top": 114.92897988208009,
+      "left": 524.8863430107422
+    }
+  },
+  "transitions": [
+    { "stateA": "start", "label": "a", "stateB": "s0" },
+    { "stateA": "start", "label": "b", "stateB": "s2" },
+    { "stateA": "s0", "label": "b", "stateB": "s1" },
+    { "stateA": "s0", "label": "a", "stateB": "s1" },
+    { "stateA": "s1", "label": "b", "stateB": "s1" },
+    { "stateA": "s1", "label": "a", "stateB": "s0" }
+  ],
+  "bulkTests": {
+    "accept": "aaaaaabbbbbbb\naaabbb\naabbb\nabbb\nab\na\nb",
+    "reject": "bbbbba\nbba\nba\nbaba"
+  }
+}

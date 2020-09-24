@@ -1,0 +1,62 @@
+{
+  "type": "DFA",
+  "dfa": {
+    "transitions": {
+      "start": { "0": "s0", "1": "s1" },
+      "s0": { "0": "s5", "1": "s4" },
+      "s1": { "0": "s2", "1": "s3" },
+      "s3": { "0": "s6", "1": "s10" },
+      "s10": { "0": "s15", "1": "s15" },
+      "s15": { "0": "s15", "1": "s15" },
+      "s12": { "0": "s15", "1": "s15" },
+      "s5": { "0": "s6", "1": "s12" },
+      "s4": { "0": "s15", "1": "s15" },
+      "s2": { "0": "s15", "1": "s15" },
+      "s6": { "0": "s6", "1": "s6" }
+    },
+    "startState": "start",
+    "acceptStates": ["s15"]
+  },
+  "states": {
+    "start": {},
+    "s0": { "top": 506.9965254980469, "left": 127.98611900390625 },
+    "s1": { "top": 247.98611900390625, "left": 127.98611900390625 },
+    "s5": { "top": 546.9965254980468, "left": 413.9931075292969 },
+    "s4": { "top": 405.9895980078125, "left": 312.98611900390625 },
+    "s2": { "top": 185.00000450195313, "left": 340.98962852539063 },
+    "s3": { "top": 95.98958274902344, "left": 237.98611900390625 },
+    "s6": { "top": 282.98611900390625, "left": 550.9896285253906 },
+    "s10": { "top": 112.98611900390625, "left": 686.9965865332031 },
+    "s15": {
+      "isAccept": true,
+      "top": 321.996556015625,
+      "left": 895.9896895605468
+    },
+    "s12": { "top": 526.9965254980468, "left": 800.0000655371093 }
+  },
+  "transitions": [
+    { "stateA": "start", "label": "0", "stateB": "s0" },
+    { "stateA": "start", "label": "1", "stateB": "s1" },
+    { "stateA": "s0", "label": "0", "stateB": "s5" },
+    { "stateA": "s0", "label": "1", "stateB": "s4" },
+    { "stateA": "s1", "label": "0", "stateB": "s2" },
+    { "stateA": "s1", "label": "1", "stateB": "s3" },
+    { "stateA": "s3", "label": "0", "stateB": "s6" },
+    { "stateA": "s3", "label": "1", "stateB": "s10" },
+    { "stateA": "s10", "label": "0", "stateB": "s15" },
+    { "stateA": "s10", "label": "1", "stateB": "s15" },
+    { "stateA": "s15", "label": "0", "stateB": "s15" },
+    { "stateA": "s15", "label": "1", "stateB": "s15" },
+    { "stateA": "s12", "label": "0", "stateB": "s15" },
+    { "stateA": "s12", "label": "1", "stateB": "s15" },
+    { "stateA": "s5", "label": "0", "stateB": "s6" },
+    { "stateA": "s5", "label": "1", "stateB": "s12" },
+    { "stateA": "s4", "label": "0", "stateB": "s15" },
+    { "stateA": "s4", "label": "1", "stateB": "s15" },
+    { "stateA": "s2", "label": "0", "stateB": "s15" },
+    { "stateA": "s2", "label": "1", "stateB": "s15" },
+    { "stateA": "s6", "label": "0", "stateB": "s6" },
+    { "stateA": "s6", "label": "1", "stateB": "s6" }
+  ],
+  "bulkTests": { "accept": "", "reject": "" }
+}

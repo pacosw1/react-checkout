@@ -1,0 +1,113 @@
+.input-cont {
+  // background-color: black;
+  height: 4rem;
+  // border: 1px solid;
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: left;
+
+  label {
+    // position: absolute;
+    transform: translateY(-2.8rem);
+    color: rgb(126, 126, 126);
+    top: 2.5rem;
+
+    width: 100%;
+    font-family: "Lato", sans-serif;
+
+    transition: 0.3s;
+    padding: 0 0.55rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    // visibility: hidden;
+    // opacity: 0;
+  }
+}
+
+// .input-field {
+
+//   /* font-family: "Roboto", sans-serif; */
+//   font-family: "Lato", sans-serif;
+//   font-weight: 700;
+//   letter-spacing: 1px;
+//   line-height: 5px;
+//   color: rgb(58, 58, 58);
+// }
+
+.input-field:hover {
+  border: 1px solid rgb(12, 185, 113);
+}
+
+.input-field:placeholder-shown ~ label {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input-field:placeholder-shown {
+  // // padding: 0 0.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-weight: 300;
+  height: 4rem;
+  // padding-top: 1rem;
+  // padding-bottom: 1rem;
+}
+
+// .input-field::placeholder {
+//   padding-left: 2rem;
+// }
+
+// .input-field:focus {
+//   // border: 2px solid;
+//   outline-color: rg, 185, 113);
+// }
+
+.input-cont .input-field:focus + .input-label {
+  // color: red !important;
+  transform: translateY(-2.8rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+  font-family: "Roboto", sans-serif;
+  outline-color: rgb(12, 185, 113);
+
+  font-weight: 300;
+
+  border-radius: 0.2rem;
+  // box-shadow: 0 0 3px #ddd inset;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  // padding-top: 2rem;
+
+  height: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  width: 100%;
+}
+
+.input-cont .input-field:placeholder-shown + .input-label {
+  transform: translateY(-2.4rem);
+
+  opacity: 0;
+}
+
+// input:valid {
+//   border: 1px solid green;
+// }
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.input-cont + .input-label {
+  opacity: 1;
+}
