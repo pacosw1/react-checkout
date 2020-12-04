@@ -38,19 +38,19 @@ export const Checkout = (props) => {
     }
   `;
 
-  const { loading, error, data } = useQuery(SessionData);
+  // const { loading, error, data } = useQuery(SessionData);
 
-  if (loading) return <h1>Loading</h1>;
-  console.log(data);
+  // if (loading) return <h1>Loading</h1>;
+  // console.log(data);
 
-  if (error) return <h1>Error loading Data</h1>;
+  // if (error) return <h1>Error loading Data</h1>;
 
   return (
     <div className="checkout">
       <CollapseHeader open={open} setOpen={setOpen} />
       <Tabs tab={tab} tabs={tabs} />
       <Content
-        data={data}
+        // data={data}
         tabs={tabs}
         setTab={setTab}
         tab={tab}
